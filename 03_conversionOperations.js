@@ -28,3 +28,9 @@ let boolIsLoggedIn = Boolean(isLoggedIn)
 
 console.log(boolIsLoggedIn); // outputs true : converted to bool datatype
 // 1 => true ; 0 => false ; "" => false ; "asfa" => true
+
+let someNumber = 786
+let stringNumber = String(someNumber)
+console.log(typeof(stringNumber)); // outputs string : converts number to string
+
+
