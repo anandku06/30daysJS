@@ -20,3 +20,11 @@ score = null;
 console.log(typeof (Number(score)))
 console.log((Number(score))) // outputs 0 after converted to number
 
+// pure strings can't be converted to numbers
+
+let isLoggedIn = 1
+
+let boolIsLoggedIn = Boolean(isLoggedIn)
+
+console.log(boolIsLoggedIn); // outputs true : converted to bool datatype
+// 1 => true ; 0 => false ; "" => false ; "asfa" => true
