@@ -62,4 +62,4 @@ testing(); // calling of the function : name of the function followed by a set o
 
 console.log(myFunc); // but using a variable for function then console logging it gives this [Function: myFunc] tells that it has a function which should be called traditionally using parenthesis
 
-myFunc() // same traditional calling
+myFunc() // same traditional calling of functions
