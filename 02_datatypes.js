@@ -1,7 +1,7 @@
 /* On the basis of the allocation of the datatypes in memory; there are two types of datatypes :
 > Primitive : 7 types (String, Number, Boolean, null, undefined, symbol, BigInt) ; Call by Value method used
 
-> Reference (Non-Primitive) : Array, Objects, Functions ; Call by Reference method
+> Reference (Non-Primitive) : Array, Objects, Functions ; Call by Reference method ; datatype are function object or object function
 */
 
 
@@ -36,3 +36,30 @@ console.log(typeof undefined); // give undefined
 const id = Symbol("123") // returns symbol
 const anotherid = Symbol("123") // returns symbol
 console.log(id === anotherid); // false
+
+
+const heros = ["IronMan", "SuperMan", "Thor", "Chutiya"] // An array : collections of more than one data having different datatypes in a single variable ; elements can be accessed using Indexing(starts from 0 upto size - 1); denoted by square brackets; seperated by commas
+
+const myObj = {
+    name : "Anand",
+    age : 19
+} // An object : stores values as key : value pairs; enclosed in curly braces; also seperated by commas
+
+// Function in JavaScript
+
+function testing()
+{
+    console.log("Hello World!!");
+}
+// testing is the name of the function and this is the basic syntax of a function in JS
+// also used as declaring a variable of this function
+
+const myFunc = function(){
+    console.log("Enjoying JavaScript");
+}
+
+testing(); // calling of the function : name of the function followed by a set of parenthesis
+
+console.log(myFunc); // but using a variable for function then console logging it gives this [Function: myFunc] tells that it has a function which should be called traditionally using parenthesis
+
+myFunc() // same traditional calling
