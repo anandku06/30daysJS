@@ -20,3 +20,6 @@ let price = 10000000
 console.log(price.toLocaleString());// default is Indian here ; 1,00,00,000
 // a method used to convert the number to string but in local currency word i.e. in price
 
+// max size of number can be seen using methods MAX_SAFE_INTEGER or MIN_SAFE_INTEGER
+
+// ========================== MATHS =============================
