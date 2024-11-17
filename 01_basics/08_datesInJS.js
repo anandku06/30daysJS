@@ -25,3 +25,10 @@ console.log(myTimeStamp);
 console.log(anyDate.getTime()); // Returns the stored time value in milliseconds since midnight, January 1, 1970 UTC.
 
 console.log(Math.floor(Date.now() / 1000)) // returns the ms time in s and floor to avoid any decimals
+
+/* To get any specific value from Date object like day or month or year use .getMonth(), .getDay(), .getYear(), etc. */
+
+anyDate.toLocaleString('default', {
+    weekday: "long"
+}) 
+/* this method take arguments that are used to customise the format ; takes first the basic format, then an object in which you define any specifications for the format like weekday must be full(Monday), etc. */
