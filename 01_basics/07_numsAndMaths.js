@@ -37,3 +37,15 @@ console.log(Math.floor(8.3));
 
 console.log(Math.min(6,7,89,43,56)); // returns the minimum element from the specified array 
 console.log(Math.max(6,7,89,43,56)); // returns the maximum element from the specified array
+
+console.log(Math.random()); // Returns a pseudorandom number between 0 and 1(exclusive)
+console.log(Math.random() * 10); // returns a random number between 0 to 10(exclusive)
+console.log((Math.random() * 10) + 1); //  now from 1 to 10
+console.log(Math.floor(Math.random() * 10) + 1); //  to avoid unneccesary decimal use floor method to get a whole value
+
+const min = 10
+const max = 20
+
+// now a range is given for random number generation
+console.log(Math.floor(Math.random() * (max - min + 1) + min));
+/* to get random numbers under the specified range we use this formula (max - min + 1) ; (max - min) for getting the range and + 1 to avoid zero and added the min value so that numbers should be greater than min value and wrapped this whole in floor method to get the whole number */
