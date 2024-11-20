@@ -15,6 +15,7 @@ const regularUser = {
 };
 
 console.log(regularUser.fullName.firstName); // chaining of dots to access the nested object's element
+
 /* Concept of Optional chaining (?.) comes if the accessed object's key is null or undefined then rather throwing an error it'll show undefined */
 
 const obj1 = {
@@ -79,6 +80,11 @@ const {platform = "Youtube"} = course
 const {teacher : {male, female}} = course
 // destructure nested objects by specifying the path to the properties
 const {email , ...otherDetails} = regularUser // rest operator collects the remaining properties if number of properties is more
+
+function greet({courseName, price}){
+    console.log(`The course ${courseName} has price ${price}`)
+}
+// can also be destructured directly in function params to extract values from an object passed as an argument
 
 /*
 Rest Operator : used to collect the remaining elements or properties during destructuring in arrays or objects into a single variable ; gathers elements or properties that are not assigned yet to variables
