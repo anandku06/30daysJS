@@ -91,3 +91,14 @@ Rest Operator : used to collect the remaining elements or properties during dest
 
 Spread Operator : used to spread out or expand the elements of an array or properties of an object ; expands the elements or properties so that they can be passed or assigned individually
 */
+
+/* JSON is JavaScript Object Notation is a format in which any details or info from an API come ; easy to read, write and parse ; mainly used between client and server comms ; common format used to handle API calls and answers.
+for ex -
+{
+    "name" : "Anand",
+    "age" : "20",
+    "sex" : "Male"
+} it's a basic API syntax where key is of type string and values can be of any type
+
+can be of type object({}) and array([])
+*/
