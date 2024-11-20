@@ -37,6 +37,22 @@ console.log(jsUser["fullName"]);
 // console.log(jsUser.mySym); // when symbol accessed using dot notation returns undefined bcz its not a property name but a variable
 console.log(jsUser[mySym]); // its correct accessing of symbol key from an object
 
+jsUser.email = "xyz@chatgpt.com" // values in objects can be overwritten 
 
+// Object.freeze(jsUser) // Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
 
+jsUser.email = "xyz@microsoft.com" // value won't overwrite bcz object is freezed
+
+console.log(jsUser); // email is not overwritten ; and symbol is also displayed
+
+jsUser.greeting = function(){
+    console.log("Hello JS User");
+}
+
+jsUser.greetings = function(){
+    console.log(`Hello ${this.name}`);
+}
+console.log(jsUser.greeting); // it outputs the function declaration and function object [Function (anonymous)]
+(jsUser.greeting());
+(jsUser.greetings());
 
