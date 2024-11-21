@@ -1,5 +1,4 @@
 /* Functions : code that can be reused whenever needed to avoid repetitive coding and making the codebase more of a mess;
-
 envelopes a set of code that can be used if needed without writing the whole logic 
 */
 
