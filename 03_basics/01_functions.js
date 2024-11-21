@@ -70,4 +70,21 @@ function handleObject(anyObject)
     console.log(`Username is ${anyObject.userName} and price is ${anyObject.cost}`);
 }
 
-handleObject(user)
+handleObject(user) // here problem is when the passed argument us not a object; to avoid this we pass whole object as argument
+handleObject({
+    userName : "hitesh",
+    cost : 299
+})
+
+// passing arrays in function
+
+const newArray = [1,2,3,4,54]
+
+function returnSecondValue(array)
+{
+    return array[1]
+}
+
+console.log(returnSecondValue(newArray))
+
+console.log(returnSecondValue([1,2,34,5]))
