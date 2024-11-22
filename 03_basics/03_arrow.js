@@ -33,3 +33,17 @@ const chai = function(){
     console.log(this.username); // undefined ; here this is not considering the context inside function, so it only works with objects
 }
 
+/* Arrow Functions : shorthand for declaring functions in JS ; ES6 features ; 
+
+Syntax :
+const funcName = () => { body of function }
+funcName() this is calling of that function
+*/
+
+const chai = () => {
+    const username = "hitesh"
+    console.log(this.username); // here also undefined
+    console.log(this); // logs empty object   
+}
+
+chai()
