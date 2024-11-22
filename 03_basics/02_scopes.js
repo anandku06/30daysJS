@@ -28,3 +28,22 @@ console.log(a); // outputs the a in global scope i.e. 100
 // console.log(c); // if c is declared globally with different value then also it'll take the value that is initialised recently
 // it takes the variable c because this variable declared using var keyword that violates the scope rules so avoid using it
 
+function one(){  // made a function that has a variable
+    const username = "hitesh"   // initialised a variable
+
+    function two(){  // made another function 
+        const website = "youtube"   // declared another variable
+
+        console.log(username);   // logging the variable declared outside of this functional scope
+    }
+
+    // console.log(website);  // logging the variable declared in the two's function scope ; gives error as accessing the variable outside it's scope
+    
+    two() // calling the function
+}
+
+one()  // calling the function
+
+/* logging the website variable gives the error because the scope of two's function is ended and accessing the variable in global scope (here one's functional scope) from the local scope (two's functional scope) is not allowed as after the scope termination the variable assigned in that scope is now unknown */ 
+
+/* In case of nested function : Child function can access the variables of the Parent function but Parent function can't access the variable of child  */
