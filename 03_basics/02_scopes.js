@@ -47,3 +47,20 @@ one()  // calling the function
 /* logging the website variable gives the error because the scope of two's function is ended and accessing the variable in global scope (here one's functional scope) from the local scope (two's functional scope) is not allowed as after the scope termination the variable assigned in that scope is now unknown */ 
 
 /* In case of nested function : Child function can access the variables of the Parent function but Parent function can't access the variable of child  */
+
+// same goes for if-else blocks as well
+if(true){
+    const username = "hitesh"
+
+    if(username === "hitesh"){
+        const website = " youtube"
+        console.log(username + website);
+    }
+
+    // console.log(website);  // error as accessing local scope's variable globally
+    
+}
+// console.log(username); // error as accessing local scope's variable globally
+
+/* Parent if-else block can't access the child if-else block's variable but child if-else block can access the parent's if-else block's variable */
+
