@@ -1,0 +1,28 @@
+JavaScript Execution Context : how any .js files are executed and run by the JavaScript ;
+In JavaScript, Execution Context refers to the environment in which code is executed.
+It determines which variables, functions, and objects are accessible and how 'this' is defined.
+
+Two types of Execution Context:
+-> Global Execution Context : referred by 'this' keyword, 
+    created when the .js file executed for the first time.
+    - includes, the global object(window in browser, and global in Node.js)
+    - variables and functions declared in the global scope
+
+
+-> Functional Execution Context : created whenever a function in invoked
+
+
+
+-> Eval Execution Context
+
+Steps of Execution of a .js file:
+=> first global execution of the program and all this referred to 'this' keyword
+=> Memory Phase : all the variables used in the program are collected and assigned with the value undefined and for the function name it'll contain the function definition.
+=> Execution Phase : all variables get thier values and a new Execution Context is made for each functions 
+    in the program with a new variable environment and execution 
+    thread and again all the phases are repeated from the beginning. 
+    In the case for functions, all variables used in the functions get thier value and execution of the function is done
+    After the execution the global context space is deleted
+
+
+CallStack : is a data structure that keeps track of the execution of the functions. It follows the LIFO(LastInFirstOut) principle, meaning the last function added to the stack is the first one to be executed and removed.
