@@ -21,7 +21,10 @@ if(true){
     
 } // these variables are enclosed in the if scope
 
-console.log(a); // shows error because a is defined in the block scope of if ; not accesible outside
+console.log(a); // outputs the a in global scope i.e. 100
+
+// console.log(a); // shows error because a is defined in the block scope of if ; not accesible outside
 // console.log(b); // shows error because b is defined in the block scope of if ; not accesible outside
 // console.log(c); // if c is declared globally with different value then also it'll take the value that is initialised recently
 // it takes the variable c because this variable declared using var keyword that violates the scope rules so avoid using it
+
