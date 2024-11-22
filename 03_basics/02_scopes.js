@@ -64,3 +64,15 @@ if(true){
 
 /* Parent if-else block can't access the child if-else block's variable but child if-else block can access the parent's if-else block's variable */
 
+/* Hoisting in JS : a behavior where variable and function declarations are moved to the top of thier containing scope during the compilation phase, before the ode execution. This means you can use variables or functions even before they are declared in the code */
+
+console.log(addOne(5))  // no error
+function addOne(num){
+    return num + 1
+}  // traditional function declaration alows hoisting
+
+
+console.log(addTwo(5))  // throws an error because calling function before initialisation
+const addTwo = function (num){
+    return num + 2
+}  // function initialisation using variables doesn't allow hoisting
