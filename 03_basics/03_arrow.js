@@ -18,3 +18,18 @@ user.welcomeMessage() // welcome mssg also changed bcz this signifies the values
 console.log(this); // logs an empty object bcz here this refers to the reference of the current scope and here not any scope is defined in node environment
 // but this changes in browser's environment : this refers to the window object in browser's environment
 
+function chai(){
+    let username = "Hitesh"
+    console.log(this);  // outputs a number of listing that this function holds
+
+    console.log(this.username); // undefined ; here this is not considering the context inside function, so it only works with objects
+}
+
+// same for functions declared using variables
+const chai = function(){
+    let username = "Hitesh"
+    console.log(this);  // outputs a number of listing that this function holds
+
+    console.log(this.username); // undefined ; here this is not considering the context inside function, so it only works with objects
+}
+
