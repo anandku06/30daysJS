@@ -13,7 +13,7 @@ Two types of Execution Context:
 
 
 
--> Eval Execution Context
+-> Eval Execution Context : created when eval() function is invoked; rarely used due to performance and security concerns
 
 Steps of Execution of a .js file:
 => first global execution of the program and all this referred to 'this' keyword
