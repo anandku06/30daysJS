@@ -83,3 +83,10 @@ val1 = undefined ?? 15 // 15 is assigned here
 val1 = null ?? 10 ?? 189 // here first notNull value is assignes=d here i.e. 10
 
 console.log(val1);
+
+/* Ternary operator -> condition : true ? false; acts as a 
+if-else block i.e . condition is checked if true then left side
+of the colon is executed else right side is executed */
+
+const iceTeaPrice = 100
+iceTeaPrice >= 80 ? console.log("Mehenga") : console.log("Sasta")
