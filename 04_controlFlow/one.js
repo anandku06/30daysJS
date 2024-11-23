@@ -46,12 +46,23 @@ if (balance > 500) console.log("Ameer"); // shorthand notation for if when only 
 if (balance > 500) console.log("Ameer"), console.log("Log"); // can execute multiple statements using comma to seperate
 
 // if-else if ladder
-if(balance < 500) console.log("gareeb");
-
-else if(balance < 750) console.log("Not so gareeb");
-
-else if(balance < 900) console.log("Now ameer");
-
+if (balance < 500) console.log("gareeb");
+else if (balance < 750) console.log("Not so gareeb");
+else if (balance < 900) console.log("Now ameer");
 else console.log("Gaand faad ameer");
 
 // wanted to check multiple conditions, then use else-if statement acts as if but executed when earlier ifs are false
+
+const userLoggedIn = true;
+const debitCard = true;
+const loggedInFromEmail = true
+const loggedInFromGoogle = false
+
+if (userLoggedIn && debitCard) {
+  console.log("Allow to buy course");
+}
+// '&&' signifies logical AND operator; returns true when both side conditions are true else false
+
+if(loggedInFromGoogle || loggedInFromEmail){
+    console.log("User Logged in");
+} // '||' signifies logical OR operator; returns true if one of the condition is true else false
