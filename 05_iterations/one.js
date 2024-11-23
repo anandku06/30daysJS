@@ -59,3 +59,21 @@ for (let index = 0; index < myArr.length; index++) {
     console.log(element)
 } /* here in condition not used '=' sign as the indexing in arrays 
     are 0-based so last element always be at [size - 1]th index */
+
+/* break and continue */
+
+for (let index = 1; index <= 20; index++) {
+    if(index == 5){
+        console.log("Detected 5")
+        break;
+    } // when index equals to 5 then logs the mssg given and break the loop
+    console.log(`Value of i is ${index}`)
+}
+
+for (let index = 1; index <= 20; index++) {
+    if(index == 5){
+        console.log("Detected 5")
+        continue;
+    } // when index equals to 5 then logs the mssg given and skip that particular iteration and continues the loop
+    console.log(`Value of i is ${index}`)
+}
