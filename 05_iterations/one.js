@@ -23,3 +23,39 @@ to ensure the iteration is executed for a specified number
 of time;
 'i++' after each iteration i is increased by one to signify
 the completion of each iteration */
+
+for (let i = 0; i < 10; i++) {
+    const element = i;
+    if(element == 5){
+        console.log("5 is the beast number");
+    }
+    console.log(element)
+}
+
+// Nested Loops
+
+for (let i = 0; i < 5; i++) {
+    console.log(`Outer Loop ${i}`)
+    for(let j = 0; j < 5; j++){
+        console.log(`Outer Loop ${i} and Inner Loop ${j}`)
+    }
+}
+/* flow of program is like for first value of i = 0, the inner loop will
+    run for about 0 to 5 times(j = 0 - 4), and as the increment of
+    i is done inner loop is executed 5 times each */
+
+// tables from 1 to 10
+
+for(let i = 1; i <= 10; i++){
+    console.log(`Outer loop ${i}`)
+    for(let j = 1; j <= 10; j++){
+        console.log(`${i} x ${j} = ${i * j}`)
+    }
+}
+
+let myArr = ['f', 'g', 'b', 'i']
+for (let index = 0; index < myArr.length; index++) {
+    const element = myArr[index];
+    console.log(element)
+} /* here in condition not used '=' sign as the indexing in arrays 
+    are 0-based so last element always be at [size - 1]th index */
