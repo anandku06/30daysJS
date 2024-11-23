@@ -66,3 +66,20 @@ if (userLoggedIn && debitCard) {
 if(loggedInFromGoogle || loggedInFromEmail){
     console.log("User Logged in");
 } // '||' signifies logical OR operator; returns true if one of the condition is true else false
+
+/* Nullish Coalescing Operator(??) : especially for null and undefined ; used to provide a default value when the left-handed operand is null or undefined 
+
+Syntax : 
+let result = exp1 ?? exp2
+
+exp1 : value to be checked
+exp2 : default value to be given if exp1 is null or undefined
+*/
+
+let val1
+val1 = 5 ?? 10 // 5 is assigned here
+val1 = null ?? 10 // 10 is assigned here ; as null 
+val1 = undefined ?? 15 // 15 is assigned here
+val1 = null ?? 10 ?? 189 // here first notNull value is assignes=d here i.e. 10
+
+console.log(val1);
