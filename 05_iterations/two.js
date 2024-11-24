@@ -22,3 +22,14 @@ while (i < myArr.length) {
     console.log(`Super heros are: ${myArr[i]}`)
     i++
 }
+
+/* do..while loop : as the name suggest, first loop then check the
+condition ; i.e. if the condition given is false then also the
+loop will run for atleast one time */
+
+let score = 1 // initialisation according to which the loop will run
+
+do {
+    console.log(`Score is ${score}`);
+    score++
+} while (score <= 10); // loop will run for the first time then condition is checked
