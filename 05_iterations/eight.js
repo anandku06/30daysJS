@@ -10,27 +10,27 @@
 const myNums = [1, 2, 3];
 
 let numbers = myNums.reduce((acc, currVal) => {
-    console.log(`accumulator: ${acc} and Current value: ${currVal}`)
-    return acc + currVal
-}, 0) // second arg is the initial value for acc variable; returned value of the method is then updated to the acc var after each iteration
+  console.log(`accumulator: ${acc} and Current value: ${currVal}`);
+  return acc + currVal;
+}, 0); // second arg is the initial value for acc variable; returned value of the method is then updated to the acc var after each iteration
 
-console.log(numbers)
+console.log(numbers);
 
 const shopCart = [
-    {
-        itemName : "js course",
-        price : 5999
-    },
-    {
-        itemName : "py course",
-        price : 4999
-    },
-    {
-        itemName : "java course",
-        price : 6999
-    }
-]
+  {
+    itemName: "js course",
+    price: 5999,
+  },
+  {
+    itemName: "py course",
+    price: 4999,
+  },
+  {
+    itemName: "java course",
+    price: 6999,
+  },
+];
 
-let totalPrice = shopCart.reduce((acc, item) => acc + item.price, 0)
+let totalPrice = shopCart.reduce((acc, item) => acc + item.price, 0);
 
-console.log(totalPrice)
+console.log(totalPrice);
