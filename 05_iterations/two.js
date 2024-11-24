@@ -14,3 +14,11 @@ while(index <= 10){
     index += 2
 } /* example of a basic while loop ; initialisation and updation 
     not done in the while loop like for loop */
+
+let myArr = ['flash', 'spiderman', 'superman', 'ironman']
+
+let i = 0
+while (i < myArr.length) {
+    console.log(`Super heros are: ${myArr[i]}`)
+    i++
+}
