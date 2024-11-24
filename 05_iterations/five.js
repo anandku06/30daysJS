@@ -27,3 +27,26 @@ coding.forEach(printMe) // external function can also be given here
 coding.forEach((item, index, arr) => 
     console.log(item, index, arr)
 ) // has the access of the whole array, indices and values
+
+const myCoding = [
+    {
+        languageName : "JavaScript",
+        extension : "js"
+    },
+    {
+        languageName : "Java",
+        extension : "java"
+    },
+    {
+        languageName : "Python",
+        extension : "py"
+    },
+    {
+        languageName : "C++",
+        extension : "cpp"
+    }
+] // if data is given in this format
+
+myCoding.forEach((item) => {
+    console.log(`Data are as follows : ${item.languageName} -> ${item.extension}`)
+}) // item targets each element in the array i.e. objects and accessing values from the object usng dot notation
