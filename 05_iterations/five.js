@@ -2,7 +2,7 @@
     iteration on arrays very much efficent and easier ; targets 
     each element in the array and calls the callback function on
     each element ; has the access of the values, indices and the
-    whole array as well
+    whole array as well ; doesn't return any value
     
     Syntax:
     
