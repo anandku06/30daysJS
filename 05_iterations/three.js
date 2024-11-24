@@ -8,10 +8,10 @@
     }
         > iterator is initialised using for traversal
         > object at which loop is to be done 
-    */
+*/
 
-        const arr = [1, 2, 3, 4, 5]
+const arr = [1, 2, 3, 4, 5];
 
-        for (const num of arr) {
-            console.log(num)
-        }
+for (const num of arr) {
+  console.log(num);
+}
