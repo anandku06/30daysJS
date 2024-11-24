@@ -36,3 +36,9 @@ const books = [
   { title: "Book Eight", genre: "Science", publish: 2011, edition: 2016 },
   { title: "Book Nine", genre: "Non-Fiction", publish: 1981, edition: 1989 },
 ];
+
+let userBooks = books.filter((book) => book.genre === "History") 
+userBooks = books.filter((book) => book.publish >= 2000)
+userBooks = books.filter((book) => book.publish >= 1990 && book.genre === "History")
+
+console.log(userBooks)
