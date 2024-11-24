@@ -34,3 +34,12 @@ for (const [key, value] of map) { // if only want key or value or both use destr
     // console.log(key) // logs each key, value pair in a different array
     console.log(`Key and values are: ${key} -> ${value}`)
 }
+
+const myObj = {
+    game1 : 'NFS',
+    game2 : "Assasin's Creed"
+}
+
+// for (const [key, value] of myObj) {
+//     console.log(key, value)
+// } // for of can't be used to iterate over an object
