@@ -15,8 +15,18 @@
 </head>
 <body>
     <div>
-        <h1 id="title" class="heading">DOM Learning on Chai and Code</h1>
+        <h1 id="title" class="heading">DOM Learning on Chai and Code <span style="display: none;">Hello World!!</span></h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam beatae harum illum eum excepturi quibusdam corporis, totam culpa provident. Repellendus error impedit, a rem enim voluptatum dolore dolores! Nisi, dolore!</p>
+
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
     </div>
 </body>
 </html>
@@ -34,4 +44,15 @@
         webpage or not
     .innerText : also returns the content of the specified element but only the visible text on the webpage i.e. if some text 
         is hidden from the user then here also that text is not returned
+    .innerHTML : returns the content of the element alongwith any other HTML element used in it
+
+    Same for document.getELementByClassName("className") : selects the element with the specified class 'className'
+
+    document.querySelector() : selects the element having the specified query ; query can be elementName, className followed
+        by dot(.) just like CSS selector, same for idName use '#' , returns the first occurence of the matched getElementById
+
+        ex. - document.querySelector(".className")/("#idName")/("input"), etc.
+    
+    document.querySelectorAll() : selects the whole occurences of the specified query for the element and returns a nodeList of the occurences
+        (nodeList has some properties of an array but not considered as an array same for HTMLCollections.)
      -->
