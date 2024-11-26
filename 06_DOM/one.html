@@ -23,9 +23,10 @@
         <h2>Lorem ipsum dolor sit amet consectetur.</h2>
 
         <ul>
-            <li>one</li>
-            <li>two</li>
-            <li>three</li>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
         </ul>
     </div>
 </body>
@@ -46,7 +47,8 @@
         is hidden from the user then here also that text is not returned
     .innerHTML : returns the content of the element alongwith any other HTML element used in it
 
-    Same for document.getELementByClassName("className") : selects the element with the specified class 'className'
+    Same for document.getELementByClassName("className") : selects the element with the specified class 'className', returns a 
+    HTML collection when specified with the className of more than one element
 
     document.querySelector() : selects the element having the specified query ; query can be elementName, className followed
         by dot(.) just like CSS selector, same for idName use '#' , returns the first occurence of the matched getElementById
@@ -55,4 +57,6 @@
     
     document.querySelectorAll() : selects the whole occurences of the specified query for the element and returns a nodeList of the occurences
         (nodeList has some properties of an array but not considered as an array same for HTMLCollections.)
+
+    To use HTML collections or Node list as array, convert it to array using Array constructor's from method that takes the iterable as an argument
      -->
