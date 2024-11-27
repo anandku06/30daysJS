@@ -27,5 +27,16 @@
     } // same function but optimised
 
     addOptiLanguage("Golang")
+
+    const secLang = document.querySelector("li:nth-child(2)") // selects the 2nd li's child element 
+
+    const newLi = document.createElement('li')
+    newLi.textContent = "MoJo"
+    secLang.replaceWith(newLi) // Replaces node with nodes, while replacing strings in nodes with equivalent Text nodes.
+
+    const lang = document.querySelector("li:first-child") // selects the first child element of the specified element
+    // console.log(lang.outerHTML)
+    lang.outerHTML = '<li>TypeScript</li>'
+
 </script>
 </html>
