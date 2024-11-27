@@ -26,5 +26,11 @@
 
     console.log(parent.firstElementChild) // returns the first child of the parent element
     console.log(parent.lastElementChild) // returns the last child of the parent element
+
+    const dayOne = document.querySelector(".days") // selects the first occurence of the targetted element
+    console.log(dayOne)
+    console.log(dayOne.parentElement) // returns the parent element of the specified element
+    console.log(dayOne.nextElementSibling) // returns the just sibling of the specified element
+    console.log("Nodes : ", parent.childNodes) // returns the NodeList of the element specified; a complex tree-structure
 </script>
 </html>
