@@ -15,9 +15,17 @@
         const li = document.createElement("li")
         li.innerHTML = `${langName}`
         document.querySelector(".language").appendChild(li)
-    }
+    } // defining a function that adds the child elements in the specified element ; not so optimised approach
 
     addLanguage("python")
     addLanguage("typescript")
+
+    function addOptiLanguage(langName){
+        const li = document.createElement("li")
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector(".language").appendChild(li)
+    } // same function but optimised
+
+    addOptiLanguage("Golang")
 </script>
 </html>
