@@ -13,5 +13,15 @@
     console.log(div)
     div.className = "main" // sets the className for the specified element
     div.id = Math.round(Math.random() * 10 + 1) // gives the element an id attribute; here id is randomised
+    div.setAttribute("title", "generated title") // Sets the value of element's first attribute whose qualified name is qualifiedName to value.
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    // div.innerText = "Chai Aur Code" // extracts the refernece of the element then writes the specified value ; not considered optimised
+
+    const text = document.createTextNode("Chai Aur Code") // Creates a text string from the specified value.
+    div.appendChild(text) // appends a child element to the specified element
+    /* This div is not shown on the main page as it's not appended yet to the document */
+
+    document.body.appendChild(div) // now the created element is shown
 </script>
 </html>
