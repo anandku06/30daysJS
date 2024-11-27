@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM | Chai aur Code</title>
 </head>
-<body>
-    
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <div class="days">Monday</div>
+        <div class="days">Tuesday</div>
+        <div class="days">Wednesday</div>
+        <div class="days">Thursday</div>
+    </div>
 </body>
+<script>
+    const parent = document.querySelector(".parent")
+    console.log(parent);
+    console.log(parent.children); // returns a HTML collection of the targetted element's descendants
+    console.log(parent.children[1]) // accessing the elements from the HTML collection using indexing
+    console.log(parent.children[1].innerHTML)
+    
+    for (let index = 0; index < parent.children.length; index++) {
+        console.log(parent.children[index].innerHTML)
+    } // classic for loops works fine on any iterables
+
+    console.log(parent.firstElementChild) // returns the first child of the parent element
+    console.log(parent.lastElementChild) // returns the last child of the parent element
+</script>
 </html>
