@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Events</title>
   </head>
-  <body>
+  <body style="background-color: #414141; color: aliceblue;">
     <h2>Amazing Images</h2>
     <ul id="images">
       <li>
@@ -55,4 +55,21 @@
       </li>
     </ul>
   </body>
+  <script>
+    /* Events in JavaScript usually invoked due to some activity ; run in sequential manner (some exceptions);
+    */
+
+    // document.querySelector('#owl').onclick = () => {
+    //     alert("Owl Clicked")
+    // } // added a onclick event on the element with id of owl
+    // onclick is the property that handles any click event on the specified element ; feats are limited so not used 
+
+    document.querySelector('#owl').addEventListener('click', () => {
+        alert("Owl Clicked")
+    })
+    // addEventListener property of any element is used to add a listener that listens the event specified and invokes the specified function; Takes 3 params - 'event', ()=>{}, false/true ;
+
+    // attachEvent() - old method, not used 
+    // jQuery - on
+  </script>
 </html>
