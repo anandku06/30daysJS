@@ -73,17 +73,18 @@
     // currentTarget, clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
     
-    /* Event Bubbling : if an event is invoked by child element then the event of the parent element is also invoked */
+    /* Event Bubbling : if an event is invoked by child element then the event of the parent element is also invoked ; to prevent this use .stopPropagation() method */
     
-    // document.querySelector('#images').addEventListener('click', (e) => {
-    //     alert("Photos clicked")
-    //     // console.log(e)
-    // }, false)
+    document.querySelector('#images').addEventListener('click', (e) => {
+        alert("Photos clicked")
+        // console.log(e)
+    }, false)
 
-    // document.querySelector('#owl').addEventListener('click', (e) => {
-    //     alert("Owl Clicked")
-    //     // console.log(e)
-    // }, false)
+    document.querySelector('#owl').addEventListener('click', (e) => {
+        alert("Owl Clicked")
+        // console.log(e)
+        e.stopPropagation()
+    }, false)
     
     // here due to event bubbling (bcz 3rd param is false), event of the child element(owl) is invoked before the parent's event
 
@@ -93,8 +94,8 @@
         // console.log(e)
     }, true)
 
-    document.querySelector('#owl').addEventListener('click', (e) => {
-        alert("Owl Clicked")
+    document.querySelector('#photoshop').addEventListener('click', (e) => {
+        alert("PhotoShop Clicked")
         // console.log(e)
     }, true) 
 
