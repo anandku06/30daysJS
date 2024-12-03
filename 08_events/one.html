@@ -64,12 +64,40 @@
     // } // added a onclick event on the element with id of owl
     // onclick is the property that handles any click event on the specified element ; feats are limited so not used 
 
-    document.querySelector('#owl').addEventListener('click', () => {
-        alert("Owl Clicked")
-    })
     // addEventListener property of any element is used to add a listener that listens the event specified and invokes the specified function; Takes 3 params - 'event', ()=>{}, false/true ;
-
+    
     // attachEvent() - old method, not used 
     // jQuery - on
+    
+    // some e methods - type, timestamp, defaultPrevented, target, toElement, srcElement
+    // currentTarget, clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+    
+    /* Event Bubbling : if an event is invoked by child element then the event of the parent element is also invoked */
+    
+    // document.querySelector('#images').addEventListener('click', (e) => {
+    //     alert("Photos clicked")
+    //     // console.log(e)
+    // }, false)
+
+    // document.querySelector('#owl').addEventListener('click', (e) => {
+    //     alert("Owl Clicked")
+    //     // console.log(e)
+    // }, false)
+    
+    // here due to event bubbling (bcz 3rd param is false), event of the child element(owl) is invoked before the parent's event
+
+
+    document.querySelector('#images').addEventListener('click', (e) => {
+        alert("Photos clicked")
+        // console.log(e)
+    }, true)
+
+    document.querySelector('#owl').addEventListener('click', (e) => {
+        alert("Owl Clicked")
+        // console.log(e)
+    }, true) 
+
+    // this is event capturing when 3rd param is true; here parent element's event is invoked before the child's event
   </script>
 </html>
