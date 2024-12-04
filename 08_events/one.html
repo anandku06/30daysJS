@@ -75,30 +75,41 @@
     
     /* Event Bubbling : if an event is invoked by child element then the event of the parent element is also invoked ; to prevent this use .stopPropagation() method */
     
-    document.querySelector('#images').addEventListener('click', (e) => {
-        alert("Photos clicked")
-        // console.log(e)
-    }, false)
+    // document.querySelector('#images').addEventListener('click', (e) => {
+    //     alert("Photos clicked")
+    //     // console.log(e)
+    // }, false)
 
-    document.querySelector('#owl').addEventListener('click', (e) => {
-        alert("Owl Clicked")
-        // console.log(e)
-        e.stopPropagation()
-    }, false)
+    // document.querySelector('#owl').addEventListener('click', (e) => {
+    //     alert("Owl Clicked")
+    //     // console.log(e)
+    //     e.stopPropagation()
+    // }, false)
     
-    // here due to event bubbling (bcz 3rd param is false), event of the child element(owl) is invoked before the parent's event
+    // // here due to event bubbling (bcz 3rd param is false), event of the child element(owl) is invoked before the parent's event
 
+
+    // document.querySelector('#images').addEventListener('click', (e) => {
+    //     alert("Photos clicked")
+    //     // console.log(e)
+    // }, true)
+
+    // document.querySelector('#photoshop').addEventListener('click', (e) => {
+    //     alert("PhotoShop Clicked")
+    //     // console.log(e)
+    // }, true) 
+    // // this is event capturing when 3rd param is true; here parent element's event is invoked before the child's event
+
+    // document.querySelector('#google').addEventListener('click',(e)=>{
+    //   e.preventDefault() // prevents the default function of the element
+    //   e.stopPropagation()
+    //   alert("hello")
+    // })
 
     document.querySelector('#images').addEventListener('click', (e) => {
-        alert("Photos clicked")
-        // console.log(e)
-    }, true)
-
-    document.querySelector('#photoshop').addEventListener('click', (e) => {
-        alert("PhotoShop Clicked")
-        // console.log(e)
-    }, true) 
-
-    // this is event capturing when 3rd param is true; here parent element's event is invoked before the child's event
+      let removeLi = e.target.parentNode;
+      // e.target returns the element that triggered the event and .parentNode returns the parent of the element
+      removeLi.remove() // remove() : removes the element
+    })
   </script>
 </html>
