@@ -18,4 +18,5 @@ Event Loop -> to summarise this, let's assume a JS program execution ; creates a
         time, then it feeds the functions to the CallStack space for execution.
     setInterval() -> executes the program repeatedly after a certain time interval; same execution as of setTimeout
 
-    
+    fetch() -> used to fetch or get any information from the client side or from any API used; returns a Promise;
+        creates a TaskQueue which is of high Priority; works in an async manner
