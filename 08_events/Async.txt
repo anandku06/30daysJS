@@ -1,0 +1,8 @@
+JavaScript -> synchronous, single-threaded by default
+
+Execution Context -> execute one line of code at a time i.e. each
+    operation waits for the last one to complete before executing;
+    contains Call Stack and Memory Heap;
+
+Blocking Code -> block the flow of program i.e. read file sync
+Non-Blocking Code -> Doesn't block execution i.e. read file async
