@@ -6,3 +6,16 @@ Execution Context -> execute one line of code at a time i.e. each
 
 Blocking Code -> block the flow of program i.e. read file sync
 Non-Blocking Code -> Doesn't block execution i.e. read file async
+
+Event Loop -> to summarise this, let's assume a JS program execution ; creates a Call Stack for function calling and
+    a Memory Heap for the variables used ; if the execution is on Web/Browser, then with the help of WebAPI, DOM API can 
+    be used and DOM manipulation is done. As the program execution is done, functions stacked in the CallStack space and
+    called one by one. 
+    For using async nature of JS we use functions like setTimeout(), setInterval() and fetch() to enhance the user engagement
+    and efficiency.
+    setTimeout() -> executes the program after a specified time, doesn't block the overall execution of the program; 
+        registers a CallBack function and creates a TaskQueue that has all the setTimeout program to be executed after the
+        time, then it feeds the functions to the CallStack space for execution.
+    setInterval() -> executes the program repeatedly after a certain time interval; same execution as of setTimeout
+
+    
