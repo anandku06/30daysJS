@@ -10,8 +10,17 @@
     <button id="stop">Stop</button>
 </body>
 <script>
-    setTimeout(()=>{
-        console.log("Anand")
-    }, 2000) // takes two params; one callback function or handler, other is the time after which the function is executed
+    const sayMyName = () => {
+        console.log("Anand") 
+    }
+
+    const changeMyName = () => {
+        document.querySelector('h1').innerHTML = 'Best JS Series'
+    }
+    setTimeout(changeMyName, 2000)
+    // setTimeout(sayMyName, 2000)
+    // setTimeout(()=>{
+    //     // console.log("Anand")
+    // }, 2000) // takes two params; one callback function or handler, other is the time after which the function is executed
 </script>
 </html>
