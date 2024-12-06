@@ -11,6 +11,20 @@
     <button id="stop">Stop</button>
 </body>
 <script>
-    
+    // setInterval(() => {
+    //     console.log("Anand", Date.now())
+    // }, 1000) 
+    // invokes the function at the specified interval of the time again and again
+    // take two params; callback function/handler and time (in ms)
+    const sayDate = (str) => {
+        // console.log("Anand", Date.now())
+        console.log(str, Date.now())
+    }
+
+    // setInterval(sayDate, 1000) // can pass reference of functions as well
+
+    const intervalID = setInterval(sayDate, 1000, 'Anand') // takes a third param for functions that need any value
+
+    clearInterval(intervalID) // used to stop the execution of the setInterval function
 </script>
 </html>
