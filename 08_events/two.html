@@ -17,10 +17,15 @@
     const changeMyName = () => {
         document.querySelector('h1').innerHTML = 'Best JS Series'
     }
-    setTimeout(changeMyName, 2000)
+    const changed = setTimeout(changeMyName, 2000)
     // setTimeout(sayMyName, 2000)
     // setTimeout(()=>{
     //     // console.log("Anand")
     // }, 2000) // takes two params; one callback function or handler, other is the time after which the function is executed
+
+    document.querySelector('#stop').addEventListener('click', () => {
+        clearTimeout(changed) // stops the timeout function specified
+        console.log("Stopped")
+    })
 </script>
 </html>
