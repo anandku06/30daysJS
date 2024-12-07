@@ -23,16 +23,21 @@
 
     // setInterval(sayDate, 1000) // can pass reference of functions as well
 
-    const intervalID = setInterval(sayDate, 1000) // takes a third param for functions that need any value
+    const intervalID = null // takes a third param for functions that need any value
 
-    clearInterval(intervalID) // used to stop the execution of the setInterval function
+    // clearInterval(intervalID) // used to stop the execution of the setInterval function
 
     document.querySelector('#start').addEventListener('click', () => {
-        intervalID
+        if(!intervalID){
+            intervalID = setInterval(sayDate, 1000)
+        }
     })
 
     document.querySelector('#stop').addEventListener('click', () => {
-        clearInterval(intervalID)
+        if(intervalID){
+            clearInterval(intervalID)
+            intervalID = null
+        }
     })
 </script>
 </html>
