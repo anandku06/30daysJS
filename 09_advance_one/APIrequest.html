@@ -29,8 +29,14 @@
     const xhr = new XMLHttpRequest() // bcz XMLHttpRequest is a class so use it's methods we make a instance of that class here.
 
     xhr.open('GET', url) // Sets the request method, request URL, and synchronous flag.
-    xhr.onreadystatechange = () => {
+    xhr.onreadystatechange = function () {
         console.log(xhr.readyState) // returns the current state
+
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText)
+            console.log(data)
+        }
+        // after completion i.e. (when state is 4) then it returns a response so to get that response we use this keyword as we specify the context also
     } 
     // takes a callback function that is invoked whenever it gets a change in the state
     xhr.send() // Initiates the request. The body argument provides the request body, if any, and is ignored if the request method is GET or HEAD.
