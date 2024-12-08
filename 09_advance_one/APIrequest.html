@@ -33,8 +33,10 @@
         console.log(xhr.readyState) // returns the current state
 
         if(xhr.readyState === 4){
-            const data = JSON.parse(this.responseText)
-            console.log(data)
+            const data = JSON.parse(this.responseText) // parses the response in the JSON format for easier manipulation
+            // console.log(this) // gives the whole XHR object
+
+            console.log(data.avatar_url)
         }
         // after completion i.e. (when state is 4) then it returns a response so to get that response we use this keyword as we specify the context also
     } 
