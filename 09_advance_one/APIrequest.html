@@ -5,4 +5,11 @@
         Used heavily in AJAX programming 
         
     AJAX(Asynchronous JavaScript and XML) : not a technology, but rather an approach to using a number of existing technologies together, including HTML or XHTML, etc. and most importantly the XMLHttpRequest object.
+
+    XMLHttpRequest.readyState -> property returns the state an XMLHttpRequest client is in. Some of the following states are :
+    0 -- UNSENT -> Client has been created. open() not been called.
+    1 -- OPENED -> open() has been called.
+    2 -- HEADERS_RECEIVED -> send() has been called, and headers adn status are available.
+    3 -- LOADING -> Downloading: representText holds partial data.
+    4 -- DONE -> The operation is complete.
 -->
