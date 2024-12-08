@@ -1,2 +1,79 @@
-# 30 days JavaScript Challenge
- It's a practice challenge to brush up my JS knowledge.
+# 30 Days JavaScript Challenge
+
+Welcome to the 30 Days JavaScript Challenge! This repository is a collection of JavaScript exercises and examples to help you brush up on your JavaScript knowledge and improve your coding skills.
+
+## Table of Contents
+
+1. [Basics](#basics)
+    - [Variables](01_basics/01_variables.js)
+    - [Data Types](01_basics/02_datatypes.js)
+    - [Conversion Operations](01_basics/03_conversionOperations.js)
+    - [Comparison](01_basics/04_comparison.js)
+    - [Memory](01_basics/05_memory.js)
+    - [Strings](01_basics/06_strings.js)
+    - [Numbers and Math](01_basics/07_numsAndMaths.js)
+    - [Dates](01_basics/08_datesInJS.js)
+2. [Arrays and Objects](#arrays-and-objects)
+    - [Arrays](02_basics/01_arrays.js)
+    - [More Arrays](02_basics/02_arrays.js)
+    - [Objects](02_basics/03_objects.js)
+    - [More Objects](02_basics/04_objects.js)
+3. [Functions and Scopes](#functions-and-scopes)
+    - [Functions](03_basics/01_functions.js)
+    - [Scopes](03_basics/02_scopes.js)
+    - [Arrow Functions](03_basics/03_arrow.js)
+    - [IIFE](03_basics/04_iife.js)
+4. [Control Flow](#control-flow)
+    - [If Statements](04_controlFlow/one.js)
+    - [Switch Statements](04_controlFlow/switch.js)
+    - [Truthy and Falsy](04_controlFlow/truthy.js)
+5. [Iterations](#iterations)
+    - [For Loops](05_iterations/one.js)
+    - [While Loops](05_iterations/two.js)
+    - [Do-While Loops](05_iterations/three.js)
+    - [For...of Loops](05_iterations/four.js)
+    - [For...in Loops](05_iterations/five.js)
+6. [DOM Manipulation](#dom-manipulation)
+    - [DOM Basics](06_DOM/one.js)
+    - [DOM Elements](06_DOM/two.html)
+7. [Events](#events)
+    - [Event Handling](08_events/one.js)
+    - [Async Events](08_events/Async.txt)
+
+## Basics
+
+This section covers the fundamental concepts of JavaScript, including variables, data types, and basic operations.
+
+## Arrays and Objects
+
+Learn about arrays and objects, which are essential data structures in JavaScript.
+
+## Functions and Scopes
+
+Understand how functions work in JavaScript, including different types of functions and scope rules.
+
+## Control Flow
+
+Explore how to control the flow of your program using if statements, switch statements, and truthy/falsy values.
+
+## Iterations
+
+Master different types of loops to iterate over data structures.
+
+## DOM Manipulation
+
+Learn how to interact with the Document Object Model (DOM) to create dynamic web pages.
+
+## Events
+
+Understand how to handle events in JavaScript, including asynchronous events.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgements
+
+- Inspired by various JavaScript tutorials and challenges available online.
+
+Happy coding!
