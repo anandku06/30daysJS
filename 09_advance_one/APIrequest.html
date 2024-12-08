@@ -22,10 +22,9 @@
     <title>APIRequesting</title>
     <style>
       body {
-        margin: 0;
-        padding: 0;
         display: flex;
         justify-content: space-evenly;
+        color: white;
       }
 
       .container {
@@ -60,11 +59,15 @@
     <div class="container">
       <div id="image"></div>
       <div id="name"></div>
+      <div id="other">
+        <span class="location"></span>
+        <span class="repos"></span>
+      </div>
     </div>
   </body>
   <script>
     const photo = document.querySelector("#image");
-    const url = "https://api.github.com/users/hiteshchoudhary";
+    const url = "https://api.github.com/users/anandku06";
     const xhr = new XMLHttpRequest(); // bcz XMLHttpRequest is a class so use it's methods we make a instance of that class here.
 
     xhr.open("GET", url); // Sets the request method, request URL, and synchronous flag.
@@ -88,6 +91,8 @@
         h3.innerHTML = name
 
         document.querySelector('#name').appendChild(h3)
+
+        document.querySelector('.location').textContent = data.location
       }
       // after completion i.e. (when state is 4) then it returns a response so to get that response we use this keyword as we specify the context also
     };
