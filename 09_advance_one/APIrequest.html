@@ -43,10 +43,14 @@
         border-radius: 50%;
         width: fit-content;
         height: fit-content;
-        background-color: #fff;
+        border: 2px solid black;
       }
 
       #name {
+        color: #fff;
+        font-size: 1rem;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
       }
     </style>
   </head>
@@ -71,11 +75,13 @@
         const avatar = data.avatar_url;
 
         const img = document.createElement("img");
-        img.style.height = "";
-
+        img.style.height = '3rem';
+        img.style.borderRadius = '50%';
         img.setAttribute("src", avatar);
-
+        
         photo.appendChild(img);
+        
+        const h3 = document.createElement('h2')
       }
       // after completion i.e. (when state is 4) then it returns a response so to get that response we use this keyword as we specify the context also
     };
