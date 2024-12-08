@@ -33,10 +33,11 @@
         height: 10rem;
         width: 10rem;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         border: 2px solid white;
+        padding: 2rem;
       }
 
       #image {
@@ -44,6 +45,7 @@
         width: fit-content;
         height: fit-content;
         border: 2px solid black;
+        display: flex;
       }
 
       #name {
@@ -62,7 +64,7 @@
   </body>
   <script>
     const photo = document.querySelector("#image");
-    const url = "https://api.github.com/users/anandku06";
+    const url = "https://api.github.com/users/hiteshchoudhary";
     const xhr = new XMLHttpRequest(); // bcz XMLHttpRequest is a class so use it's methods we make a instance of that class here.
 
     xhr.open("GET", url); // Sets the request method, request URL, and synchronous flag.
@@ -73,6 +75,7 @@
         const data = JSON.parse(this.responseText); // parses the response in the JSON format for easier manipulation
         // console.log(this) // gives the whole XHR object
         const avatar = data.avatar_url;
+        const name = data.name
 
         const img = document.createElement("img");
         img.style.height = '3rem';
@@ -80,8 +83,11 @@
         img.setAttribute("src", avatar);
         
         photo.appendChild(img);
-        
-        const h3 = document.createElement('h2')
+
+        const h3 = document.createElement('h3')
+        h3.innerHTML = name
+
+        document.querySelector('#name').appendChild(h3)
       }
       // after completion i.e. (when state is 4) then it returns a response so to get that response we use this keyword as we specify the context also
     };
