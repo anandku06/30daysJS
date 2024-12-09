@@ -74,7 +74,6 @@ This project is licensed under the MIT License.
 
 ## Acknowledgements
 
-- Inspired by Hitesh Choudhary sir, you'll find him with some new tech baatcheet and a cup of chai 
-- <a href='https://www.youtube.com/@chaiaurcode'> ChaiAurCode </a>
+This project is inspired by the collective knowledge and resources available in the JavaScript community. Special thanks to all the educators, content creators, and developers who share their expertise and passion for coding. Your contributions make learning and growing as a developer an enriching experience.
 
 Happy coding!
