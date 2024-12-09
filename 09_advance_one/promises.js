@@ -40,3 +40,14 @@ new Promise((resolve, reject) => {
 }).then(() => {
     console.log("again Promise resolved")
 })
+
+const promiseThree = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve({userName : 'Anand', email : 'abc@abc.com'}) // we can pass data that can be used when Promise is resolved
+    },1000)
+})
+
+// if in the Promise definition, any params is given in the resolve() calling then it's always passed here in then(), use any var to access that data
+promiseThree.then((user) => {
+    console.log(user)
+})
