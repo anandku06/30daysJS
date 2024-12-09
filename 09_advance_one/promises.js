@@ -129,4 +129,14 @@ async function getAllUsers() {
     }
 }
 
-getAllUsers()
+// using fetch method directly as it returns a Promise so, trying the Promise method
+
+fetch('https://api.github.com/users/anandku06').then((res) => {
+    return res.json()
+}).then((data) => {
+    console.log(data)
+}).catch((err) => {
+    console.log(err)
+})
+
+// execution of fetch() is taken as high priority by JS so it'll executed before any of the code
