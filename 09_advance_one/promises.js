@@ -116,3 +116,17 @@ async function consumePromiseFive() {
 }
 
 consumePromiseFive()
+
+// fetch() : returns a Promise; used to fetch any info from provided URL 
+async function getAllUsers() {
+    try {
+        const res = await fetch('https://api.github.com/users/anandku06')
+        const data = await res.json() // returns Promise, so use await
+        // .json() method also returns a Promise; reads the request body and returns it as a Promise that resolves with the result of parsing the body text as JSON.
+        console.log(data)
+    } catch (error) {
+        console.log(`E: ${error}`)
+    }
+}
+
+getAllUsers()
