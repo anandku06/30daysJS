@@ -74,6 +74,7 @@ This project is licensed under the MIT License.
 
 ## Acknowledgements
 
-- Inspired by Hitesh Choudhary sir, you'll find him with some new tech baatcheet and a cup of chai <a href='https://www.youtube.com/@chaiaurcode'> ChaiAurCode </a>
+- Inspired by Hitesh Choudhary sir, you'll find him with some new tech baatcheet and a cup of chai 
+- <a href='https://www.youtube.com/@chaiaurcode'> ChaiAurCode </a>
 
 Happy coding!
