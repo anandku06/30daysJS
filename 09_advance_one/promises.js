@@ -51,3 +51,32 @@ const promiseThree = new Promise((resolve, reject) => {
 promiseThree.then((user) => {
     console.log(user)
 })
+
+// sometimes error is occured, to handle that we call reject method and any error message can be passed to it
+const promiseFour = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        let error = false // true
+        if(!error){
+            resolve({userName : 'Anand', email : 'xyz@xyz.com'})
+        }
+        else{
+            reject('Error occurred !!') // if error occured then reject method is executed
+        }
+    }, 1000)
+})
+
+promiseFour.then((user) => {
+    console.log(user)
+    return user.userName // .then() also returns value but, the returned value can only be accessed using .then() method chaining i.e. calling .then() method one after another...
+    // the returned value is not accessible using variable
+}).then((name) => {
+    console.log(name)
+}).catch((err) => {
+    console.log(err)
+})
+
+// can't access here throws error
+// const value = promiseFour.then((user) => {
+//     return user.userName
+// })
+// console.log(value); 
