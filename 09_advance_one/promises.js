@@ -15,12 +15,18 @@
 
 // to make a promise, we make a instance of the Promise Object using new keyword
 // takes two params : resolve and reject - the made Promise is resolved or rejected
+// the params works as signals for completion or rejection of the promise, so they are called as function in the definition of the promise
 const promiseOne = new Promise((res, rej) => {
     // Do an async Task
     // DB calls, cryptography, network
 
     setTimeout(() => {
         console.log("Task Completed");
+        res() // here it is called that signifies the Promise is resolved 
     }, 1000)
 })
 
+// res() definition
+promiseOne.then(() => {
+    console.log("Promise resolved");
+}) // Attaches callbacks for the resolution and/or rejection of the Promise
