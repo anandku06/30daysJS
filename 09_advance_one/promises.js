@@ -30,3 +30,13 @@ const promiseOne = new Promise((res, rej) => {
 promiseOne.then(() => {
     console.log("Promise resolved");
 }) // Attaches callbacks for the resolution and/or rejection of the Promise
+
+// without making a variable
+new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log("again Task Completed");
+        resolve()
+    }, 1000)
+}).then(() => {
+    console.log("again Promise resolved")
+})
