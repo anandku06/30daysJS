@@ -80,3 +80,30 @@ promiseFour.then((user) => {
 //     return user.userName
 // })
 // console.log(value); 
+
+// Using Different approach to handle Promises
+/* async... await : An async function declared using async keyword
+    always returns a Promise.
+
+    await is used to pause the execution of an async function until a Promise is resolved or rejected. Can only be used inside async function
+*/
+
+const promiseFive = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        let error = false
+        if(!error){
+            resolve({userName : 'JavaScript', password : '123'})
+        }else{
+            reject('Error: JS went wrong')
+        }
+    }, 1000)
+})
+
+async function consumePromiseFive() {
+    const res = await promiseFive
+    console.log(res)
+}
+
+consumePromiseFive()
+
+// here the main problem is that async... await doesn't handle the errors correctly, here the scenario is that the Promise has to be resolved which sometimes not possible so using try-catch with async function
