@@ -73,7 +73,7 @@ promiseFour.then((user) => {
     console.log(name)
 }).catch((err) => {
     console.log(err)
-})
+}).finally(() => console.log("Finally executed fully")) // Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). Always executed
 
 // can't access here throws error
 // const value = promiseFour.then((user) => {
