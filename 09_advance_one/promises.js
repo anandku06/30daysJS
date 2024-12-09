@@ -14,5 +14,13 @@
 */
 
 // to make a promise, we make a instance of the Promise Object using new keyword
+// takes two params : resolve and reject - the made Promise is resolved or rejected
+const promiseOne = new Promise((res, rej) => {
+    // Do an async Task
+    // DB calls, cryptography, network
 
-const promiseOne = new Promise()
+    setTimeout(() => {
+        console.log("Task Completed");
+    }, 1000)
+})
+
