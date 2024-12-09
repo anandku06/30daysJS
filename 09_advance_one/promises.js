@@ -90,7 +90,7 @@ promiseFour.then((user) => {
 
 const promiseFive = new Promise((resolve, reject) => {
     setTimeout(() => {
-        let error = false
+        let error = true
         if(!error){
             resolve({userName : 'JavaScript', password : '123'})
         }else{
@@ -99,11 +99,20 @@ const promiseFive = new Promise((resolve, reject) => {
     }, 1000)
 })
 
+// async function consumePromiseFive() {
+//     const res = await promiseFive
+//     console.log(res)
+// }
+
+// here the main problem is that async... await doesn't handle the errors correctly, here the scenario is that the Promise has to be resolved which sometimes not possible so using try-catch with async function
+
 async function consumePromiseFive() {
-    const res = await promiseFive
-    console.log(res)
+    try {
+        const res = await promiseFive
+        console.log(res)
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 consumePromiseFive()
-
-// here the main problem is that async... await doesn't handle the errors correctly, here the scenario is that the Promise has to be resolved which sometimes not possible so using try-catch with async function
