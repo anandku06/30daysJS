@@ -118,7 +118,7 @@ async function consumePromiseFive() {
 consumePromiseFive()
 
 /* fetch() : returns a Promise; used to fetch any info from
-    provided URL;
+    provided URL; creates a Priority Queue or MicroTask Queue
     a global method starts the process of fetching the resource from the network, returning a promise which is fulfilled once the response in available
 
     can also be used to send data as well; after URL put comma and you can send your optional data
