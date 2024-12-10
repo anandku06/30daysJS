@@ -117,7 +117,10 @@ async function consumePromiseFive() {
 
 consumePromiseFive()
 
-// fetch() : returns a Promise; used to fetch any info from provided URL 
+/* fetch() : returns a Promise; used to fetch any info from
+    provided URL;
+    a global method starts the process of fetching the resource from the network, returning a promise which is fulfilled once the response in available
+*/ 
 async function getAllUsers() {
     try {
         const res = await fetch('https://api.github.com/users/anandku06')
@@ -140,3 +143,5 @@ fetch('https://api.github.com/users/anandku06').then((res) => {
 })
 
 // execution of fetch() is taken as high priority by JS so it'll executed before any of the code
+
+/* NOTE: A fetch() promise only rejects when a network error is encountered (which is usually when there's a permission issue or similar). A fetch() promise doesn't reject on HTTP errors(404, etc.). Instead, a then() handler must check the Response.ok and/or Response.status properties. */
