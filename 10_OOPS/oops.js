@@ -43,3 +43,6 @@ console.log(userOne.constructor) // returns the reference of themselves
     constructor function is called, that injects all the provided parameters to the created instance
     returned the newly made object
 */
+
+/* instanceOf operator tests to see if the prototype property of
+    a contructor appears anywhere in the prototype chain of an object. The return value is boolean. */
