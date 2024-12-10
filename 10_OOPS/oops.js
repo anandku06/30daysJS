@@ -36,3 +36,10 @@ const userTwo = new User('Ayyush', true, 11) // it overwrites the previous value
 
 console.log(userOne)
 console.log(userTwo)
+
+console.log(userOne.constructor) // returns the reference of themselves
+/* When new keyword is used then;
+    first it creates an empty object
+    constructor function is called, that injects all the provided parameters to the created instance
+    returned the newly made object
+*/
