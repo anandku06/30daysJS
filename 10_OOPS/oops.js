@@ -7,6 +7,11 @@ const user = {
 
     getUserDetails : function (){
         console.log("Got user details from database")
+        console.log(`Username ${this.userName} is registered`) // give the context of userName element using this keyword; this ensures the context or scope of the execution
     }
 }
 
+console.log(user.userName)
+console.log(this) // in node environment, this keyword refers to a empty object as there isn't a thing to refer globally
+// but in browser's console, this keyword returns a window object
+user.getUserDetails()
