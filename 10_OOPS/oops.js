@@ -18,7 +18,6 @@ user.getUserDetails()
 
 // Constructor function
 /* new keyword is a constructor function here, used to create multiple instances of a class/object */
-const promiseOne = new Promise()
 const date = new Date()
 
 function User(userName, isLoggedIn, loginCount){
@@ -28,4 +27,12 @@ function User(userName, isLoggedIn, loginCount){
     this.isLoggedIn = isLoggedIn
 
     return this // returns the current context of the object
+    // if not returned then it implicitly returns the object created
 }
+// if a function is used as constructor, then it is considered as a class declaration
+
+const userOne = new User('Hitesh', true, 12)
+const userTwo = new User('Ayyush', true, 11) // it overwrites the previous values of the userOne variable
+
+console.log(userOne)
+console.log(userTwo)
