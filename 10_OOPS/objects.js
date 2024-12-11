@@ -26,3 +26,12 @@ function createUser(userName, score){
     this.userName = userName // using 'this' keyword to fixing the context of the userName variable
     this.score = score
 }
+
+createUser.prototype.increment = function(){
+    this.score++;
+    // score++; // throws an ambiguity error
+}
+// can dynamically add methods to the prototype of a constructor function, and all existing instances of the constructor will have access to the new method
+
+const chai = createUser('chai', 290)
+const tea = createUser('tea', 29)
