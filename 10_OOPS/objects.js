@@ -31,7 +31,14 @@ createUser.prototype.increment = function(){
     this.score++;
     // score++; // throws an ambiguity error
 }
+
+createUser.prototype.printMe = function(){
+    console.log(`Price is ${this.score}`)
+}
 // can dynamically add methods to the prototype of a constructor function, and all existing instances of the constructor will have access to the new method
 
-const chai = createUser('chai', 290)
-const tea = createUser('tea', 29)
+let chai = new createUser('chai', 290)
+let tea = new createUser('tea', 29)
+
+chai.printMe()
+
