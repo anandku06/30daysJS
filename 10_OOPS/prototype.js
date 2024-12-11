@@ -46,3 +46,6 @@ const TASupport = {
 }
 
 teacher.__proto__ = User // copies the properties of the User object to teacher object
+
+// alternate approach
+Object.setPrototypeOf(teachingSupport, teacher) // Sets the prototype of a specified object o to object proto or null. Returns the object o.
