@@ -1,4 +1,4 @@
-/* Everything in JavaScript is an object */
+/* Everything in JavaScript is an object, its default behaviour is prototypal, performs prototypal inheritance */
 
 function multiplyBy5(num){
     return num * 5
