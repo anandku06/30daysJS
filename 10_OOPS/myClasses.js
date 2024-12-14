@@ -17,4 +17,13 @@ class User {
         this.email = email
         this.password = password
     }
+
+    // here when defining the methods, we don't use the function keyword, only the method name with parenthesis and curly braces
+    encryptPassword(){
+        return `abcd${this.password}abc`
+    }
 }
+
+const chai = new User('chai', 'chai@gmail.com', 'chai123')
+
+console.log(chai.encryptPassword())
