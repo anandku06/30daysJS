@@ -11,6 +11,14 @@ class User{
         this.password = password
     }
 
+    set email(mail){
+        this._email = mail.toLowerCase()
+    }
+
+    get email(){
+        return `email is -> ${this._email}`
+    }
+
     get password(){
         return `${this._password}_abcsdf12`
     }
@@ -25,3 +33,5 @@ class User{
 const userOne = new User('anand@chatgpt.com', 'agstdf')
 userOne.password = 'asdgauydgyuad'
 console.log(userOne.password)
+
+console.log(userOne.email);
