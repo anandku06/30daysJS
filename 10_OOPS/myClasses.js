@@ -22,8 +22,13 @@ class User {
     encryptPassword(){
         return `abcd${this.password}abc`
     }
+
+    capitaliseUsername(){
+        return this.userName.toUpperCase()
+    }
 }
 
 const chai = new User('chai', 'chai@gmail.com', 'chai123')
 
 console.log(chai.encryptPassword())
+console.log(chai.capitaliseUsername())
