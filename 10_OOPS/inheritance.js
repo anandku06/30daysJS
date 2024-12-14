@@ -20,4 +20,12 @@ class Teacher extends User{
         this.email = email
         this.subject = subject
     }
+
+    addCourse(){
+        console.log(`${this.userName} teaches ${this.subject}`)
+    }
 }
+
+const teacher1 = new Teacher('Hitesh', 'hitesh@gmail.com', 'JavaScript')
+
+teacher1.addCourse()
