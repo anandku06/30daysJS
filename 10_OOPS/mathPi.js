@@ -9,3 +9,27 @@ const descriptor = Object.getOwnPropertyDescriptor(Math, 'PI') // takes two para
 
 console.log(descriptor);
 // logs the whole description of the property
+
+// const chai = Object.create() // creates a new object, using an existing object as the prototype of the newly created object
+
+const chai = {
+    name : 'gingerChai',
+    price : 250,
+    isAvailable : true
+}
+
+console.log(Object.getOwnPropertyDescriptor(chai, 'name'))
+
+Object.defineProperty(chai, 'name', {
+    writable : false, // now the name property of the object can't be overwritten
+    enumerable : false // if false then you can't iterate through this property
+}) // Adds a property to an object, or modifies attributes of an existing property.
+
+console.log(Object.getOwnPropertyDescriptor(chai, 'name'))
+
+for (const key in chai) {
+    if (Object.prototype.hasOwnProperty.call(chai, key)) {
+        const element = chai[key];
+        console.log(element)
+    }
+}
