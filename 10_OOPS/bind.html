@@ -10,18 +10,26 @@
 </body>
 <script>
     /* bind method in JavaScript: creates a new function by setting 'this' keyword and optionally prepending arguments to the original functions.
-        It is used to control the context (this) in which the function is executed, and is particularly helpful in scenarios where 'this' may otherwise be ambiguous */
+        It is used to control the context (this) in which the function is executed, and is particularly helpful in scenarios where 'this' may otherwise be ambiguous 
+
+    Syntax:
+        let boundFunction = orgFunction.bind(thisArg, arg1, arg2, ...)
+
+        thisArg : value you want to set as 'this' inside the new function
+    */
     class React{
         constructor(){
             this.library = "React"
             this.server = "https://localhost:3000"
 
-            document.querySelector('button').addEventListener('click', this.handleClick)
+            document.querySelector('button').addEventListener('click', this.handleClick.bind(this)) // binding the function with the class's context
         }
 
         handleClick(){
             console.log("Button Clicked")
-            console.log(this)
+            console.log(this.library) 
+            // without using bind(): here the context of 'this' is the button that triggered the event not the class
+            // after bind(): now this will refer to the class
         }
     }
 
