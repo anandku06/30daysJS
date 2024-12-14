@@ -32,3 +32,25 @@ const chai = new User('chai', 'chai@gmail.com', 'chai123')
 
 console.log(chai.encryptPassword())
 console.log(chai.capitaliseUsername())
+
+// behind the scenes what's happening
+
+function User(userName, email, password){
+    this.userName = userName
+    this.email = email
+    this.password = password
+}
+
+User.prototype.encryptPassword = function(){
+    return `absds${this.password}abcd`
+}
+
+User.prototype.capitaliseUsername = function(){
+    return this.userName.toUpperCase()
+}
+
+
+const tea = new User('tea', 'tea@yahoo.co.in', '1234')
+
+console.log(tea.encryptPassword())
+console.log(tea.capitaliseUsername())
