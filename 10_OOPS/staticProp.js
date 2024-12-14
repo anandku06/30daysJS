@@ -18,3 +18,15 @@ class User{
 
 const user1 = new User('Rand')
 // console.log(user1.createID()) // trying access to static method then it throws an error
+
+class Teacher extends User {
+    constructor(userName,email){
+        super(userName)
+        this.email = email
+    }
+}
+
+const iPhone = new Teacher('iphone', 'i@phone.com')
+iPhone.logMe()
+
+// console.log(iPhone.createID()) // also throws an error this implies that static methods can't be accessed by the child class as well
