@@ -11,6 +11,13 @@ class User{
     }
 }
 
+// here extend keyword is used to take the properties of parent class(User) and give it to the child class (Teacher)
 class Teacher extends User{
-
+    constructor(userName, email, subject){
+        super(userName) // super keyword is used to refer the parent class constructor
+        // in the constructor, it calls the constructor of the parent class
+        // in other methods, it calls the methods of the parent class
+        this.email = email
+        this.subject = subject
+    }
 }
