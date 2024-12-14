@@ -12,11 +12,11 @@ class User{
     }
 
     set email(mail){
-        this._email = mail.toLowerCase()
+        this.email_ = mail.toLowerCase()
     }
 
     get email(){
-        return `email is -> ${this._email}`
+        return `email is -> ${this.email_}`
     }
 
     get password(){
@@ -31,7 +31,7 @@ class User{
 // use '_propertyName' for the underlying value of a property when using getters and setters
 // if not then a error is thrown i.e. Maximum callStack exceeded
 const userOne = new User('anand@chatgpt.com', 'agstdf')
-userOne.password = 'asdgauydgyuad'
+userOne.password = 'asdgauydgyuad' // this will set the value as prescribed by the setter function
 console.log(userOne.password)
 
-console.log(userOne.email);
+console.log(userOne.email); // this will give the value that is set by the getter function
