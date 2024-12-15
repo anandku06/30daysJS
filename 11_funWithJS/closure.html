@@ -6,7 +6,8 @@
     <title>Closures in JavaScript</title>
 </head>
 <body bgcolor="#212121">
-    
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
 </body>
 <script>
     /* Closures in JavaScript : A closure is the function bundled together (enclosed) with references to its surrounding state.
@@ -59,5 +60,31 @@
         The instance of displayName maintains a reference to its lexical environment, within which the variable name exists.For this reason, when myFunc is invoked, the variable 'name' remains available for use, and 'Mozilla' is passed to 'console.log'
     
     */
+</script>
+
+<script>
+    // document.querySelector('#orange').addEventListener('click', () => {
+    //     document.querySelector('body').style.backgroundColor = 'orange'
+    // })
+    // document.querySelector('#green').addEventListener('click', () => {
+    //     document.querySelector('body').style.backgroundColor = 'green'
+    // })
+    
+    // using clousures concept
+    
+    function clickHandler(color){
+        // document.body.style.backgroundColor = `${color}` // this will execute the function without event invoked
+
+        return function(){
+            document.body.style.backgroundColor = `${color}`
+        }
+    } // now this anonymous function is passed to the event handler and is invoked when the event is triggered
+
+    document.querySelector('#orange').onclick = clickHandler('orange') 
+    // here the callback function clickHandler is invoked without triggering the function
+    // here the clousure concept will come into the picture
+    document.querySelector('#green').onclick = clickHandler('green')
+
+
 </script>
 </html>
