@@ -8,4 +8,23 @@
 <body>
     
 </body>
+<script>
+    /* Closures in JavaScript : A closure is the function bundled together (enclosed) with references to its surrounding state.
+    
+    gives a function access to its outer scope. In JS, closures are created everytime a function is created, at function creation time
+    */
+
+
+    function init(){
+        let name = 'Mozilla'
+        function displayName(){
+            console.log(name)
+        }
+
+        displayName()
+    }
+
+    init()
+
+</script>
 </html>
