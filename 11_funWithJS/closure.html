@@ -25,6 +25,7 @@
 
     init()
 
+    // That's what called as lexical scoping
     function outer(){
         let userName = 'hitesh'
         function inner(){
@@ -35,6 +36,28 @@
     outer()
 
     // here the inner() function is allowed to access the variables of the outer() function
-    console.log(userName) // can't access the variables outside thier scope
+    // console.log(userName) // can't access the variables outside thier scope
+</script>
+
+<script>
+    // This what closures in JS looks like
+    function makeFunc(){
+        const name = 'Mozilla'
+        function displayName(){
+            console.log(name)
+        }
+
+        return displayName
+    }
+
+    const myFunc = makeFunc()
+    myFunc()
+
+    /* functions in JS form closures. A closure is the combination of a function and the lexical environment within which that function was declared
+        This environment consists of any variables that were in-scope at the time the closure was created.
+        Here, myFunc is a reference to the instance of the function displayName that is created when makeFunc is run.
+        The instance of displayName maintains a reference to its lexical environment, within which the variable name exists.For this reason, when myFunc is invoked, the variable 'name' remains available for use, and 'Mozilla' is passed to 'console.log'
+    
+    */
 </script>
 </html>
