@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Closures in JavaScript</title>
-</head>
-<body bgcolor="#212121">
+  </head>
+  <body bgcolor="#212121">
     <button id="orange">Orange</button>
     <button id="green">Green</button>
-</body>
-<script>
+  </body>
+  <script>
     /* Closures in JavaScript : A closure is the function bundled together (enclosed) with references to its surrounding state.
     
     gives a function access to its outer scope. In JS, closures are created everytime a function is created, at function creation time
     */
 
-    function init(){
-        let name = 'Mozilla'
-        function displayName(){
-            console.log(name)
-        }
+    function init() {
+      let name = "Mozilla";
+      function displayName() {
+        console.log(name);
+      }
 
-        displayName()
+      displayName();
     }
 
-    init()
+    init();
 
     // That's what called as lexical scoping
-    function outer(){
-        let userName = 'hitesh'
-        function inner(){
-            console.log("inner", userName)
-        }
-        inner()
+    function outer() {
+      let userName = "hitesh";
+      function inner() {
+        console.log("inner", userName);
+      }
+      inner();
     }
-    outer()
+    outer();
 
     // here the inner() function is allowed to access the variables of the outer() function
     // console.log(userName) // can't access the variables outside thier scope
-</script>
+  </script>
 
-<script>
+  <script>
     // This what closures in JS looks like
-    function makeFunc(){
-        const name = 'Mozilla'
-        function displayName(){
-            console.log(name)
-        }
+    function makeFunc() {
+      const name = "Mozilla";
+      function displayName() {
+        console.log(name);
+      }
 
-        return displayName
+      return displayName;
     }
 
-    const myFunc = makeFunc()
-    myFunc()
+    const myFunc = makeFunc();
+    myFunc();
 
     /* functions in JS form closures. A closure is the combination of a function and the lexical environment within which that function was declared
         This environment consists of any variables that were in-scope at the time the closure was created.
@@ -60,31 +60,29 @@
         The instance of displayName maintains a reference to its lexical environment, within which the variable name exists.For this reason, when myFunc is invoked, the variable 'name' remains available for use, and 'Mozilla' is passed to 'console.log'
     
     */
-</script>
+  </script>
 
-<script>
+  <script>
     // document.querySelector('#orange').addEventListener('click', () => {
     //     document.querySelector('body').style.backgroundColor = 'orange'
     // })
     // document.querySelector('#green').addEventListener('click', () => {
     //     document.querySelector('body').style.backgroundColor = 'green'
     // })
-    
-    // using clousures concept
-    
-    function clickHandler(color){
-        // document.body.style.backgroundColor = `${color}` // this will execute the function without event invoked
 
-        return function(){
-            document.body.style.backgroundColor = `${color}`
-        }
+    // using clousures concept
+
+    function clickHandler(color) {
+      // document.body.style.backgroundColor = `${color}` // this will execute the function without event invoked
+
+      return function () {
+        document.body.style.backgroundColor = `${color}`;
+      };
     } // now this anonymous function is passed to the event handler and is invoked when the event is triggered
 
-    document.querySelector('#orange').onclick = clickHandler('orange') 
+    document.querySelector("#orange").onclick = clickHandler("orange");
     // here the callback function clickHandler is invoked without triggering the function
     // here the clousure concept will come into the picture
-    document.querySelector('#green').onclick = clickHandler('green')
-
-
-</script>
+    document.querySelector("#green").onclick = clickHandler("green");
+  </script>
 </html>
