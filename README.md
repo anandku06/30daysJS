@@ -95,10 +95,6 @@ Understanding the working of XMLHttpRequest object and introduction to Promises 
 
 Understanding functional object and classes in JavaScript, inheritance, use of call, this and bind keywords, manipulation of objects, thier properties, etc.
 
-## License
-
-This project is licensed under the MIT License.
-
 ## Acknowledgements
 
 This project is inspired by the collective knowledge and resources available in the JavaScript community. Special thanks to all the educators, content creators, and developers who share their expertise and passion for coding. Your contributions make learning and growing as a developer an enriching experience.
