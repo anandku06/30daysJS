@@ -47,6 +47,16 @@ Welcome to the 30 Days JavaScript Challenge! This repository is a collection of 
 8. [Advance JavaScript Concepts](#advance)
     - [Introduction to XMLHttpRequest](09_advance_one/APIrequest.html)
     - [Introduction to Promises in JS](09_advance_one/promises.js)
+9. [Object Orientated in JavaScript](#OOPS)
+    - [Introduction to OOPS](10_OOPS/notes.md)
+    - [Object oriented programming using functions](10_OOPS/oops.js)
+    - [Using classes in JS](10_OOPS/myClasses.js)
+    - [Working of prototype keyword in JS](10_OOPS/prototype.js)
+    - [call keyword in JS](10_OOPS/call.js)
+    - [Inheritance in JS](10_OOPS/inheritance.js)
+    - [More about Objects in JS](10_OOPS/mathPi.js)
+    - [bind keyword in JS](10_OOPS/bind.html)
+    - [Getters and Setters in JS](10_OOPS/getters_setters.js)
 
 
 ## Basics
@@ -80,6 +90,10 @@ Understand how to handle events in JavaScript, including asynchronous events, ad
 ## Advance JavaScript
 
 Understanding the working of XMLHttpRequest object and introduction to Promises in JS.
+
+## OOPS concepts in JS
+
+Understanding functional object and classes in JavaScript, inheritance, use of call, this and bind keywords, manipulation of objects, thier properties, etc.
 
 ## License
 
