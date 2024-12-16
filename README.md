@@ -75,7 +75,11 @@ Learn how to interact with the Document Object Model (DOM) to create dynamic web
 
 ## Events
 
-Understand how to handle events in JavaScript, including asynchronous events.
+Understand how to handle events in JavaScript, including asynchronous events, adding or removing elements, uses of setTimeout and setInterval functions.
+
+## Advance JavaScript
+
+Understanding the working of XMLHttpRequest object and introduction to Promises in JS.
 
 ## License
 
