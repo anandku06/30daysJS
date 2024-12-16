@@ -40,8 +40,14 @@ Welcome to the 30 Days JavaScript Challenge! This repository is a collection of 
     - [Adding and Removing Elements](06_DOM/three.html)
     - [Manipulation of Elements](06_DOM/four.html)
 7. [Events](#events)
+    - [Behind the Scene of any Async Task](08_events/Async.txt)
     - [Event Handling](08_events/one.js)
-    - [Async Events](08_events/Async.txt)
+    - [setTimeout useCases](08_events/two.html)
+    - [setInterval useCases](08_events/three.html)
+8. [Advance JavaScript Concepts](#advance)
+    - [Introduction to XMLHttpRequest](09_advance_one/APIrequest.html)
+    - [Introduction to Promises in JS](09_advance_one/promises.js)
+
 
 ## Basics
 
