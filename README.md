@@ -1,6 +1,6 @@
-# 30 Days JavaScript Challenge
+# JavaScript for Beginners
 
-Welcome to the 30 Days JavaScript Challenge! This repository is a collection of JavaScript exercises and examples to help you brush up on your JavaScript knowledge and improve your coding skills.
+Welcome! This repository is a collection of JavaScript exercises and examples to help you brush up on your JavaScript knowledge and improve your coding skills.
 
 ## Table of Contents
 
