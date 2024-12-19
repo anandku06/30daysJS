@@ -7,11 +7,13 @@ jsvu -> JavaScript Version Updater, makes it easy to install recent versions of 
 Using this jsvu package you can see the working of the JavaScript on the engine level
 
 Array in JavaScript is of two types: Continuous and Holey 
+    Internal optimizations in Array
+    - SMI (Small Integer)
+    - Packed elements
+    - Double (float, string, functions)
 */
 
-const myArr = []
-
-%DebugPrint(myArr) 
+// %DebugPrint(myArr) 
 // now this command will throw error
 // this is a special command that is not included in the core JS
 // have to import from the jsvu library; used to debug any element or object specified in the parenthesis
@@ -49,3 +51,30 @@ DebugPrint: 0000022F00287DD9: [JSArray]
 
 []
 */
+
+let arr1 = [1,234,5,6,78] // PACKED_SMI_ELEMENTS -> default or most optimised array ; can be called Continuous; SMI bcz only integers are allowed for SMI
+let arr2 = [1,,5,6,78] // HOLEY_SMI_ELEMENTS -> no value present after 1 or there is a hole in there
+
+arr1.push(6.0) // now it became PACKED_DOUBLE_ELEMENTS -> inserted a float number
+
+arr1.push('hello') // now it's PACKED_ELEMENTS
+
+// if the PACKED_SMI is changed then no going back i.e. no going back from PACKED_DOUBLE to PACKED_SMI
+
+arr1[10] = 11 // it's a HOLEY_ELEMENTS -> bcz it has holes and different types of data
+
+console.log(arr1)
+console.log(arr1.length)
+console.log(arr1[9]) // expensive operation
+
+/* How array's elements are accessed -
+    - bound check -> whether the specified index is under the array length or not, no then return undefined else
+    - hasOwnProperty(arr, index) -> under bound so if has any property or value then return else
+    - hasOwnProperty(arr.prototype, index) -> true then return else again the property is checked due to prototypal nature of JavaScript
+
+    bcz it confronts holes in it's accessing the hasOwn function is called again and again; making it fully unoptimized
+*/  
+
+// Optimization 
+// SMI > DOUBLE > PACKED
+// H_SMI > H_DOUBLE > H_PACKED
