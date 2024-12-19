@@ -11,4 +11,6 @@ Array in JavaScript is of two types: Continuous and Holey
 
 const myArr = []
 
-%DebugPrint(myArr)
+%DebugPrint(myArr) // now this commane will throw error
+// this is a special command that is not included in the core JS
+// have to import from the jsvu library; used to debug 
