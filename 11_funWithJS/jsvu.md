@@ -7,6 +7,6 @@ You have to use -g (global) flag as this module is always installed globally
 
 - Select your Operating System
 
-- Select the JS Engine you want to work with
+- Select the JS Engine you want to work with and enter; all the engines will be installed
 
 ```
