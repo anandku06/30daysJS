@@ -17,3 +17,17 @@
     - engines
     - status.json
 
+## To use the jsvu package
+
+```
+- trace the path of the bin directory of .jsvu module
+
+- use v8-debug as the engine
+
+- .jsvu/bin/v8-debug should be your path
+
+- .jsvu/bin/v8-debug --allow-natives-syntax this cmd will make a d8 environment
+
+```
+
+- After this execute your debugging commands here
