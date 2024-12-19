@@ -4,6 +4,7 @@ It is used in Chrome and in Node.js, among others.
 
 jsvu -> JavaScript Version Updater, makes it easy to install recent versions of various JavaScript engines without having to compile them from source.
 
+Using this jsvu package you can see the working of the JavaScript on the engine level
 
 Array in JavaScript is of two types: Continuous and Holey 
 */
