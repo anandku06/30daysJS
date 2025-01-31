@@ -15,3 +15,19 @@ let a, b
 
 [a = 5, b = 8] = [] // now if the array is empty then the a and b has thier default values
 // if given any value then, the vars just be overwritten
+
+// function returning arrays can also be destructured
+
+function f(){
+    return [1, 2]
+}
+[a, b] = f() // here the function 'f()' returned an array which is now destructured and the values are stored in 'a' and 'b' repectively
+
+// if you want to ignore some values during destructuring
+function f1(){
+    return [1, 2, 3]
+}
+
+[a, , b] = f1() // here we don't need the value '2' so we just avoided by the empty space and now only values '1 and 3' got destructured
+
+const [c, ...d] = ["one", "two", true, false, 12, 234] // here the first value is assigned to var c and the rest values are again converted to array and stored to d using rest operator
